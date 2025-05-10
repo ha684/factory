@@ -30,7 +30,7 @@ class DatasetAttr:
     # basic configs
     load_from: Literal["hf_hub", "ms_hub", "om_hub", "script", "file"]
     dataset_name: str
-    formatting: Literal["alpaca", "sharegpt"] = "alpaca"
+    formatting: Literal["alpaca", "sharegpt"] = "sharegpt"
     ranking: bool = False
     # extra configs
     subset: Optional[str] = None
@@ -70,7 +70,7 @@ class DatasetAttr:
         setattr(self, key, obj.get(key, default))
 
     def join(self, attr: dict[str, Any]) -> None:
-        self.set_attr("formatting", attr, default="alpaca")
+        self.set_attr("formatting", attr, default="sharegpt")
         self.set_attr("ranking", attr, default=False)
         self.set_attr("subset", attr)
         self.set_attr("split", attr, default="train")
