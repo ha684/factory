@@ -55,10 +55,10 @@ class DatasetAttr:
     # sharegpt columns
     messages: Optional[str] = "conversations"
     # sharegpt tags
-    role_tag: Optional[str] = "from"
-    content_tag: Optional[str] = "value"
-    user_tag: Optional[str] = "human"
-    assistant_tag: Optional[str] = "gpt"
+    role_tag: Optional[str] = "role"
+    content_tag: Optional[str] = "content"
+    user_tag: Optional[str] = "user"
+    assistant_tag: Optional[str] = "assistant"
     observation_tag: Optional[str] = "observation"
     function_tag: Optional[str] = "function_call"
     system_tag: Optional[str] = "system"
